@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "api_calls_made_by_validation": 0,
+  "query_rows": 48,
+  "questions": 8,
+  "trials": 3,
+  "balanced_categories": {
+    "4": 12,
+    "2": 12,
+    "3": 12,
+    "1": 12
+  },
+  "validated_query_api_responses": 314,
+  "first_response_id": 1016,
+  "recovered_failed_query_attempts": 13,
+  "last_response_id": 1708,
+  "checks": [
+    "official dataset and gold answers",
+    "fixed subset and unique paired rows",
+    "F1 and all summary statistics",
+    "upstream core source hashes",
+    "frozen memory checksum",
+    "full lexical index coverage",
+    "per-question API labels and token usage",
+    "normal completion and common API conditions"
+  ]
+}

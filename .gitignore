@@ -87,3 +87,22 @@ test_results/
 *.pth
 *.onnx
 docs/other
+
+# Homework reproduction: keep provenance and measured results, exclude local caches.
+!reproduction/data/provenance.json
+!reproduction/results/**/*.json
+reproduction/results/**/bank/
+.cache/
+
+!reproduction/data/embedding_provenance.json
+
+# Keep the final evidence and a smoke test; ignore stale local IDE runs and pilots.
+.run/
+reproduction/results/*
+reproduction/results/**/bank/
+
+!reproduction/results/locomo_window40_20261108/
+
+/run_comparison.py
+# The full historical ledger remains local; only primary query evidence is public.
+/reproduction/results/api_usage.jsonl

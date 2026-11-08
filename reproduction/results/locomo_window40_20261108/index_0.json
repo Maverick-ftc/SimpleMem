@@ -1,0 +1,5 @@
+{
+  "policy": "rebuild_after_memory_before_queries",
+  "memory_rows": 441,
+  "indexed_documents": 441
+}
