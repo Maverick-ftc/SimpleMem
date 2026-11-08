@@ -1,0 +1,91 @@
+{
+  "complete": true,
+  "arms": {
+    "baseline_k25": {
+      "completed_questions": 24,
+      "expected_questions": 24,
+      "trial_f1": [
+        0.5567765567765568,
+        0.5465367965367965,
+        0.5453344900713322
+      ],
+      "mean_f1": 0.5495492811282285,
+      "variance_f1": 3.9536520181913734e-05,
+      "std_f1": 0.006287807263419716,
+      "category_f1": {
+        "1": 0.6512820512820513,
+        "2": 0.846153846153846,
+        "3": 0.11638361638361638,
+        "4": 0.5843776106934002
+      },
+      "category_macro_f1": 0.5495492811282285,
+      "mean_seconds": 36.640103454166216,
+      "mean_retrieved_count": 54.916666666666664,
+      "mean_input_tokens": 13784.833333333334,
+      "mean_output_tokens": 780.3333333333334,
+      "query_api_peak_cny_upper_estimate": 2.307164000000001
+    },
+    "modified_k10": {
+      "completed_questions": 24,
+      "expected_questions": 24,
+      "trial_f1": [
+        0.5502370178840768,
+        0.5335751709590719,
+        0.5761726699226699
+      ],
+      "mean_f1": 0.5533282862552729,
+      "variance_f1": 0.0004608036845955011,
+      "std_f1": 0.02146633840680569,
+      "category_f1": {
+        "1": 0.6100877192982456,
+        "2": 0.8974358974358974,
+        "3": 0.1343609568583769,
+        "4": 0.5714285714285714
+      },
+      "category_macro_f1": 0.5533282862552729,
+      "mean_seconds": 31.418487620835247,
+      "mean_retrieved_count": 26.708333333333332,
+      "mean_input_tokens": 7109.416666666667,
+      "mean_output_tokens": 739.75,
+      "query_api_peak_cny_upper_estimate": 1.1210239999999976
+    }
+  },
+  "memory": [
+    {
+      "identity": {
+        "dataset_sha256": "79fa87e90f04081343b8c8debecb80a9a6842b76a7aa537dc9fdf651ea698ff4",
+        "sample_index": 0,
+        "model": "deepseek-flash",
+        "conditions": {
+          "agent_interface_streaming": false,
+          "thinking": false,
+          "max_output_tokens": 16384,
+          "transport_streaming": true,
+          "api_timeout_seconds": 180.0,
+          "memory_window_size": 40,
+          "planning": true,
+          "reflection": true,
+          "max_reflection_rounds": 2,
+          "parallel_memory_build": false,
+          "parallel_retrieval": false
+        },
+        "source_sha256": {
+          "main.py": "bb4c9d007c014912cc4689624be919399610807f7f203c79861c54f301153a46",
+          "simplemem/core/hybrid_retriever.py": "a9f4d8cadee16f9c1f3fc2e3477130769618b55e5fc46f6c1e4e7a98fcd49ef7",
+          "simplemem/core/memory_builder.py": "3e4f098edaab82745f6ef60badd1b63b87413540491d3ff1479e22bb9480f6da",
+          "simplemem/core/answer_generator.py": "7efc25adf47e42eea7df89aefe82fa560564d090472b4a1ca5f72df8dd3e45e7",
+          "test_locomo10.py": "1200e234827aa584fb9674966557036cf028e6e850deb19c729f52bda4e69467"
+        }
+      },
+      "dialogues": 419,
+      "entries": 441,
+      "actual_window_size": 40,
+      "actual_overlap_size": 2,
+      "memory_cache_replays": 0,
+      "seconds": 681.6133605000068,
+      "peak_price_cny_upper_estimate": 0.8598519999999992,
+      "memory_sha256": "d179a5e6f512cc0d0f0a70dfe0be8861fa443c3499119f3c2905fcdd3328abe7"
+    }
+  ],
+  "cumulative_peak_cny_upper_estimate": 10.92569
+}
