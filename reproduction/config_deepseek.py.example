@@ -1,0 +1,10 @@
+"""Copy to the project root as config.py. Never print secret values."""
+import os
+from pathlib import Path
+from dotenv import dotenv_values
+_local_values = dotenv_values(Path(__file__).with_name('.env'))
+OPENAI_API_KEY = os.environ.get('DEEPSEEK_API_KEY') or _local_values.get('DEEPSEEK_API_KEY', '')
+OPENAI_BASE_URL = os.environ.get('DEEPSEEK_BASE_URL') or _local_values.get('DEEPSEEK_BASE_URL') or 'https://api.deepseek.com'
+LLM_MODEL = os.environ.get('DEEPSEEK_MODEL') or _local_values.get('DEEPSEEK_MODEL') or 'deepseek-flash'
+USE_STREAMING = False
+ENABLE_THINKING = False
