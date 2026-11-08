@@ -1,3 +1,34 @@
+## FTEC5660 Individual Reproducibility Study
+
+This fork contains a **partial reproduction of the SimpleMem text-memory pipeline**
+and one controlled modification: `semantic_top_k` **25 → 10**.
+The primary experiment uses **40-turn memory windows**, one frozen 441-entry bank,
+eight fixed LoCoMo questions, and three query trials per arm (48 completed rows).
+
+| Primary result | Baseline k25 | Modified k10 |
+|---|---:|---:|
+| Mean set-token F1 (%) | 54.95 | 55.33 |
+| Sample SD of trial means (percentage points) | 0.63 | 2.15 |
+| Mean total query-pipeline input tokens | 13,784.8 | 7,109.4 |
+
+On this subset, k10 used **48.4% fewer input tokens** with similar observed mean
+lexical F1, but greater observed trial variability. This is not a guarantee of
+preserved factual accuracy, a significant improvement, or a full paper replication.
+
+- **[Installation, execution and evaluation instructions](reproduction/README.md)**
+- **[Primary protocol and results](reproduction/README_window40.md)**
+- **[Run the offline presentation check in PyCharm](verify_submission.py)**
+- Evidence: [fixed questions](reproduction/results/locomo_window40_20261108/plan.json),
+  [raw answers](reproduction/results/locomo_window40_20261108/answers.jsonl),
+  [summary](reproduction/results/locomo_window40_20261108/summary.json),
+  [validation](reproduction/results/locomo_window40_20261108/validation.json).
+
+The upstream README follows below. Its broader performance claims are the authors’
+claims, not results measured by this coursework. Only the final 40-turn experiment
+is included in this public coursework submission; earlier pilots remain local.
+
+---
+
 <div align="center">
 
 <img alt="simplemem_logo" src="https://github.com/user-attachments/assets/6ea54ad1-e007-442c-99d7-1174b10d1fec" width="450">
